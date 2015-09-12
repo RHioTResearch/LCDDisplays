@@ -1,5 +1,6 @@
 #include "org_jboss_rhiot_beacon_lcd_MiniLcdPCD8544.h"
 #include "MiniLcdPCD8544.h"
+#include <memory>
 
 static unique_ptr<MiniLcdPCD8544> theLCD;
 
