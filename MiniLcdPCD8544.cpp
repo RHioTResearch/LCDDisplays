@@ -34,9 +34,11 @@ int MiniLcdPCD8544::init(int rows, int cols) {
     // init and clear lcd
     LCDInit(_sclk, _din, _dc, _cs, _rst, contrast);
     LCDclear();
-    // show raspberrypi logo for 2 seconds
+    // show raspberrypi logo for 2 seconds, then clear it
     LCDshowLogo();
     delay(2000);
+    LCDclear();
+
     return 0;
 }
 
