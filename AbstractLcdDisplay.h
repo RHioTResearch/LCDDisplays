@@ -26,10 +26,6 @@ protected:
     AbstractLcdDisplay() { }
 
 public:
-    /**
-     * Singleton accessor
-     */
-    static AbstractLcdDisplay *getLcdDisplayInstance(LcdDisplayType type);
 
     /**
      * Initialize the display to the given size.
