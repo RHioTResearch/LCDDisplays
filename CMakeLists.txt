@@ -63,7 +63,8 @@ else()
 endif()
 
 # The LCD library
-add_library (lcdDisplayObjs OBJECT PCD8544.c AbstractLcdView.cpp MiniLcdPCD8544.cpp WiringPiLcdDisplay.cpp org_jboss_rhiot_beacon_lcd_MiniLcdPCD8544.cpp)
+add_library (lcdDisplayObjs OBJECT PCD8544.c AbstractLcdDisplay.cpp AbstractLcdView.cpp MiniLcdPCD8544.cpp WiringPiLcdDisplay.cpp
+        org_jboss_rhiot_beacon_lcd_MiniLcdPCD8544.cpp PCD8544.c)
 add_library (lcdDisplay SHARED $<TARGET_OBJECTS:lcdDisplayObjs>)
 target_link_libraries(lcdDisplay wiringPiDev wiringPi)
 install(TARGETS lcdDisplay
